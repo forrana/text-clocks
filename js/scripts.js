@@ -67,6 +67,9 @@ const timeToWords = (hours, minutes, isAM) => {
             return isAM ? "Midnight" : "Midday";
         } else return `${hoursToWords(hours)} O\'clock`;
     } else {
+        if(minutes > 30){
+            hours = +hours + 1;
+        }
         return `${minutesToWords(minutes)} ${hoursToWords(hours)}`
     }
 };
