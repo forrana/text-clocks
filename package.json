@@ -1,0 +1,23 @@
+{
+  "name": "text-clocks",
+  "version": "0.0.1",
+  "description": "Simple text clocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/forrana/text-clocks.git"
+  },
+  "author": "forrana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forrana/text-clocks/issues"
+  },
+  "homepage": "https://github.com/forrana/text-clocks#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  }
+}
