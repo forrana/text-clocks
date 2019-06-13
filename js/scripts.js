@@ -75,7 +75,10 @@ const timeToWords = (hours, minutes, isAM) => {
 };
 
 const printCurrentTime = (date) => {
-    const time = date.toLocaleString('en-US', TIME_FORMAT);
+    let time = date.toLocaleString('en-US', TIME_FORMAT);
+    if (time.length === 7) {
+      time = `0${time}`; 
+    }
     const minutes = time.slice(3, 5);
     const hours = time.slice(0, 2);
     const isAM = time.slice(6,8) === "AM";
