@@ -1,0 +1,27 @@
+.clock-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7ch, 1fr));
+  margin: auto;
+  width: 50vw;
+  text-transform: capitalize;
+  font-family: monospace;
+  color: lightgray;
+  font-size: 24px;
+}
+
+.clock-body .active {
+  color: black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+@media all and (orientation: portrait) {
+  .clock-body {
+    font-size: 48px;
+  }
+}
