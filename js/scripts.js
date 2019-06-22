@@ -123,12 +123,12 @@ const markCurrentTime = (date) => {
 generateWords(minutesWordsMatrix, "minutes");
 generateWords(boundingsWordsMatrix, "boundings");
 generateWords(hoursWordsMatrix, "hours");
-//markCurrentTime(new Date())
+markCurrentTime(new Date())
 
-//setInterval(() => markCurrentTime(new Date()), 1000*20);
+setInterval(() => markCurrentTime(new Date()), 1000*20);
 
-// document.addEventListener( 'visibilitychange' , () => {
-//     if (!document.hidden) {
-//         markCurrentTime(new Date());
-//     }
-// }, false );
+document.addEventListener( 'visibilitychange' , () => {
+    if (!document.hidden) {
+        markCurrentTime(new Date());
+    }
+}, false );
