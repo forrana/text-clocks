@@ -48,7 +48,7 @@ const resetActiveElements = () => {
 }
 
 const markCurrentHour = (hour, isLessThenHalf) => {
-  hour = !isLessThenHalf ? hour + 1 : hour;
+  hour = !isLessThenHalf ? (hour < 12 ? hour + 1 : 1) : hour;
   const currentHourElement = document.querySelector(`#hours-${hour}`);
   currentHourElement.classList.add("active");
 }
