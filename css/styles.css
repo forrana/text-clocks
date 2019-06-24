@@ -13,6 +13,10 @@
   color: black;
 }
 
+.clock-body span {
+  transition: color 1s ease;
+}
+
 .container {
   display: flex;
   align-items: center;
