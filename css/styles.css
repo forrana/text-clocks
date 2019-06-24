@@ -27,5 +27,6 @@
 @media all and (orientation: portrait) {
   .clock-body {
     font-size: 48px;
+    width: 90vw;
   }
 }
