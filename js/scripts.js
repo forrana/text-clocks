@@ -96,7 +96,7 @@ const markCurrentTime = (date) => {
 generateWords(minutesWordsMatrix, "minutes");
 generateWords(boundingsWordsMatrix, "boundings");
 generateWords(hoursWordsMatrix, "hours");
-runTests(markCurrentTime);
+// runTests(markCurrentTime);
 markCurrentTime(new Date());
 
 setInterval(() => markCurrentTime(new Date()), 1000*20);
