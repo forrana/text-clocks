@@ -106,3 +106,21 @@ document.addEventListener( 'visibilitychange' , () => {
         markCurrentTime(new Date());
     }
 }, false );
+
+const fetchDaylightTime = async (position) => {
+  const { latitude, longitude } = position.coords;
+  const resultRaw = await
+      fetch(`https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=today`);
+  const { results, status } = await resultRaw.json();
+  console.log(results, status);
+};
+
+const getLocation = () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(fetchDaylightTime);
+  } else {
+    console.warn("Geolocation is not supported by this browser.");
+  }
+}
+
+getLocation();
